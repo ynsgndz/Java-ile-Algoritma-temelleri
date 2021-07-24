@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class Main   {
+    public static void main(String[] args) {
+        Scanner input =new Scanner(System.in);
+        System.out.print("Ana paranızı giriniz: ");
+        double para=input.nextInt();
+        double kosul= para>=0 & para<=1000?para+ (para*0.18) : para+(para*0.8);
+        System.out.println("Toplam paranız:"+kosul);
+
+
+    }
+}
