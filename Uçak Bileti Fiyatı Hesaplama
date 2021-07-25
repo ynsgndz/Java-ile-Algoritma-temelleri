@@ -1,0 +1,59 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        double normalFiyat, indirimliFiyat, yas, herKm, bileti, gidisDonuslu, toplam = 0, yasIndirimi;
+                int yolTip;
+        String uyari;
+        System.out.print("Mesafeyi KM türünden giriniz :");
+        herKm = scan.nextDouble();
+        if (herKm < 0) {
+            System.out.println("Hatalı veri girdiniz !");
+        }
+        System.out.print("Yaşınızı giriniz: ");
+        yas = scan.nextDouble();
+        if (yas < 0) {
+            System.out.println("Hatalı veri girdiniz !");
+        }
+        System.out.println("Yolculuk tipini giriniz : \n 1=> Tek Yön  \n 2=> Gidiş-Dönüş");
+        yolTip = scan.nextInt();
+        switch (yolTip){
+            case 1:
+                System.out.println("Tek yön seçildi");
+                break;
+            case 2:
+                System.out.println("Gidiş dönüş seçildi");
+                break;
+            default:
+                System.out.println("HATALI SEÇİM YAPTINIZ");
+                break;
+        }
+
+        normalFiyat = herKm * 0.10;
+        System.out.println("normal fiyat : " + normalFiyat+" TL");
+        if (yas<12){
+        indirimliFiyat=normalFiyat*0.50;
+                    toplam=normalFiyat-indirimliFiyat;
+            System.out.println("İndirimli fiyat: "+toplam+" TL");
+    }if (yas>=12 && yas<=24) {
+            indirimliFiyat=normalFiyat*0.10;
+            toplam=normalFiyat-indirimliFiyat;
+            System.out.println("İndirimli fiyat: "+toplam+" TL");
+        }if (yas>65){
+            indirimliFiyat=normalFiyat*0.30;
+            toplam=normalFiyat-indirimliFiyat;
+            System.out.println("İndirimli fiyat: "+toplam +" TL");
+        }
+            if (yolTip==2){
+                gidisDonuslu=toplam*0.20;
+                bileti=(toplam-gidisDonuslu)*2;
+
+                System.out.println(" Gidiş-Dönüş özel fiyatınız: " +bileti +" TL");
+
+            }
+
+
+
+        }
+}
