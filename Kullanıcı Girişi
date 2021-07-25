@@ -1,0 +1,38 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner inp=new Scanner(System.in);
+       String userN,pass,control,newPass;
+        System.out.println("kullanıcı adınız: ");
+       userN=inp.nextLine();
+        System.out.println("Şifreniz");
+       pass=inp.nextLine();
+       if (userN.equals("patika") && pass.equals("123")){
+           System.out.println("Giriş yaptınız");
+       }else{
+           System.out.println("Hatalı Bilgiler !");
+           if (pass.equals("123")){ System.out.println("Kullanıcı adını yanlış girdiniz !"); }
+           if(userN.equals("patika")){
+               System.out.println("Şifreyi yanlış girdiniz \n  Sıfırlamak için :1 \n çıkmak için :2 ");
+                control=inp.nextLine();
+                switch (control){
+                    case "1":
+                        System.out.println("Yeni şifrenizi giriniz: ");
+                        newPass=inp.nextLine();
+                        if (newPass.equals("123")){
+                            System.out.println("Yeni şifreniz eskisiyle aynı olamaz !");
+                        }else{
+                            System.out.println("Şifre başarıyla değiştirildi     !");
+                        }
+                        break;
+                    default:
+                        System.out.println("sistem kapatıldı");
+                }
+           }
+
+
+       }
+
+
+    }
+}
