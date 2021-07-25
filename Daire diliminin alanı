@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class Main   {
+    public static void main(String[] args) {
+
+        Scanner input =new Scanner(System.in);
+    int r,a;
+    double pi=3.14,formul;
+        System.out.println("Yarıçap giriniz: ");
+    r=input.nextInt();
+        System.out.println("Merkez açıyı giriniz: ");
+    a=input.nextInt();
+
+    formul =(pi*r*r*a)/360;
+        System.out.println("Daire diliminin alanı : "+formul);
+
+
+    }
+}
