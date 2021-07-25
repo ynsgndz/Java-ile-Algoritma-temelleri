@@ -1,0 +1,38 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner inp=new Scanner(System.in);
+
+            int mat=0,fiz=0,tur=0,kim=0,muz=0,avrg=0;
+        System.out.println("Mat notu:");
+            mat=inp.nextInt();
+        System.out.println("Fizik notu:");
+            fiz=inp.nextInt();
+        System.out.println("Türkçe notu");
+            tur=inp.nextInt();
+        System.out.println("Kimya notu :");
+            kim=inp.nextInt();
+        System.out.println("Müzik notu: ");
+            muz=inp.nextInt();
+                if (mat <0 && mat>100 ||muz <0 && muz>100 || fiz <0 && fiz>100 ||tur <0 && tur>100|| kim <0 && kim>100 ) {
+                    avrg = (mat + fiz + tur + kim + muz) / 5;
+                    if (avrg < 55) {
+                        System.out.println("Kaldın: " + avrg);
+                    } else {
+                        System.out.println("Geçtin: " + avrg);
+                    }
+                }else{
+                    System.out.println("Notlarınız 0 ile 100 arasında olmalı");
+                }
+
+
+
+
+
+
+
+
+
+
+    }
+}
