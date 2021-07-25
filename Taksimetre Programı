@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Main   {
+    public static void main(String[] args) {
+int perKm,acilis;
+double tutar;
+            acilis =10;
+        Scanner input =new Scanner(System.in);
+        System.out.println("Kilometre değerini giriniz: ");
+        perKm =input.nextInt();
+        tutar =(perKm*2.20)+acilis;
+        int yirmi=20;
+
+        double kontrol = tutar>=20?tutar:yirmi;
+        System.out.println("toplam tutar: "+kontrol);
+
+
+
+    }
+}
