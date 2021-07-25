@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner inp=new Scanner(System.in);
+            int s1,s2,s3;
+        System.out.println("sayı1:");
+            s1=inp.nextInt();
+        System.out.println("sayı2:");
+            s2=inp.nextInt();
+        System.out.println("sayı3:");
+            s3=inp.nextInt();
+
+        if(s1<s2 && s1<s3 && s2<s3) { System.out.println("s1<s2<s3");}
+        if(s1<s2 && s1<s3 && s3<s2) { System.out.println("s1<s3<s2");}
+
+        if(s2<s1 && s2<s3 && s1<s3) { System.out.println("s2<s1<s3");}
+        if(s2<s1 && s2<s3 && s3<s1) { System.out.println("s2<s3<s1");}
+
+        if(s3<s2 && s3<s1 && s2<s1) { System.out.println("s3<s2<s1");}
+        if(s3<s2 && s3<s1 && s1<s2) { System.out.println("s3<s1<s2");}
+
+
+    }
+}
