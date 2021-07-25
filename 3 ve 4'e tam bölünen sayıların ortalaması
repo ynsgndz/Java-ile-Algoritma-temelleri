@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+   int girilenSayi=25,i,top=0,k=0;
+
+        System.out.println("SAyı girin: ");
+ //  girilenSayi=scan.nextInt();
+   for (i=0;i<=girilenSayi;i++){
+       if (i%3==0 && i%4==0) {
+           k++;
+           System.out.println(i);
+           top+=i;
+       }
+   }
+        System.out.print("SAyıların ortalaması: ");
+        System.out.println(top/k);
+
+
+
+
+
+    }
+}
