@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Main   {
+    public static void main(String[] args) {
+
+        Scanner input =new Scanner(System.in);
+        double a=2.14 ,e=3.67 ,d=1.11 ,m=0.95 ,p=5.00 ;
+        double aK,eK,dK,mK,pK, toplam;
+
+        System.out.println("Kaç Kg  Armut : ");
+        aK= input.nextDouble();
+        System.out.println("Kaç Kg  Elma : ");
+        eK= input.nextDouble();
+        System.out.println("Kaç Kg  Domates : ");
+        dK= input.nextDouble();
+        System.out.println("Kaç Kg  Muz : ");
+        mK= input.nextDouble();
+        System.out.println("Kaç Kg  Patlıcan : ");
+        pK= input.nextDouble();
+
+            toplam=(a*aK)+(e*eK)+(d*dK)+(m*mK)+(p*pK);
+        System.out.println("Toplam tutar: "+toplam+" TL ");
+    }
+}
