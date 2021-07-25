@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner inp=new Scanner(System.in);
+           double hot;
+        System.out.println("Sıcaklık değerini giriniz: ");
+           hot =inp.nextDouble();
+
+        if (hot<5){ System.out.println("Kayak"); }
+        if (hot>=5&& hot<15){ System.out.println("sinema"); }
+        if (hot>=15&& hot<25){ System.out.println("piknik"); }
+        if (hot>=25 ){ System.out.println("yüzme"); }
+
+
+
+
+
+
+
+
+
+    }
+}
