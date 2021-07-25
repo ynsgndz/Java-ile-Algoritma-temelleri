@@ -1,0 +1,43 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner inp=new Scanner(System.in);
+        double sayi1,toplama,cikarma,carpma,bolme;
+        int islem,sayi2;
+        System.out.print("Birinci sayıyı giriniz: ");
+        sayi1 =inp.nextDouble();
+        System.out.print("İkinci Sayıyı giriniz: ");
+        sayi2=inp.nextInt();
+        System.out.println("Lütfen hangi işlemi yapmak istediğinizi seçiniz");
+        System.out.println("1-toplama \n 2-Çıkarma \n 3-çarpma \n 4-bölme");
+        islem=inp.nextInt();
+        switch (islem){
+            case 1:
+                toplama = sayi1+sayi2;
+                System.out.println("toplama işlemi sonucu: "+toplama);
+                break;
+            case 2:
+                cikarma =sayi1-sayi2;
+                System.out.println("Çıkarma işleminin sonucu :"+cikarma);
+                break;
+            case 3:
+                carpma=sayi1*sayi2;
+                System.out.println("Çarpma işleminin sonucu :"+carpma);
+                break;
+            case 4:
+                switch (sayi2) {
+                    case 0:
+                    System.out.println("Bölme işleminde ikinci sayı Sıfır olamaz !");
+               break;
+                    default:
+                    bolme = sayi1 / sayi2;
+                    System.out.println("Bölme işlmeninin sonucu: " + bolme);
+                    break;
+                }
+                break;
+            default:
+                System.out.println("bir şeyler oldu !! tekrar deneyiniz");
+                break;
+        }
+    }
+}
