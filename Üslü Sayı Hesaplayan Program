@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+    Scanner inp=new Scanner(System.in);
+  int us,taban,islem=1;
+        System.out.println("Taban griniz: ");
+        taban=inp.nextInt();
+        System.out.println("Üssü giriniz: ");
+        us=inp.nextInt();
+        for (int i=1; i<=us;i++){
+            islem*=taban;
+        }
+        System.out.println(islem);
+    }
+}
+
