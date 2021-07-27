@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+    Scanner inp=new Scanner(System.in);
+    int n=1,r=1,k,l,m=1,formul,neksiR;
+        System.out.print("N giriniz: ");
+        k=inp.nextInt();
+        System.out.print("R giriniz: ");
+        l=inp.nextInt();
+        neksiR=k-l;
+// n faktöriyel
+    for (int i=1;i<=k;i++){
+        n*=i;
+    }
+    // r faktöriyel
+        for (int i=1;i<=l;i++){
+          r*=i;
+        }
+        System.out.println(neksiR);
+        // N eksi R faktöriyel
+        for (int i=1;i<=neksiR;i++){
+           m*=i;
+        }
+        System.out.println(" n=> "+n+" r=> "+r+"\nN eksi R =>"+m);
+            formul=     n/(r*m);
+        System.out.println("Kombinasyon sonucu: "+formul);
+    }
+}
+
