@@ -25,3 +25,41 @@ public class Main {
 
         }
         }
+
+
+
+-------------------------------------------------
+
+
+
+import java.util.Scanner;
+public class Main {
+        public static void main(String[] args) {
+
+                int giris=6;
+                int yildiz=1;
+                int bosluk=giris-1;
+
+
+                for (int x=0;x<giris;x++) {
+                for (int y=0;y<bosluk;y++){ System.out.print(" "); }
+                for (int z=0;z<yildiz;z++){ System.out.print("*"); }
+                System.out.println(" ");
+                bosluk--;
+                yildiz+=2;
+                }
+                yildiz-=4;
+                bosluk=1;
+                         for (int x=0;x<giris;x++) {
+                        for (int y=0;y<bosluk;y++){
+                                System.out.print(" ");
+                        }for (int z=0;z<yildiz;z++){
+                                System.out.print("*");
+                        }
+                        System.out.println(" ");
+                        bosluk++;
+                        yildiz-=2;
+                }
+
+        }
+        }
