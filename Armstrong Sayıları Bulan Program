@@ -1,0 +1,77 @@
+      
+      Bir sayının basamak sayılarının toplamını hesaplayan program.
+      
+      
+      import java.util.Scanner;
+public class Main {
+        public static void main(String[] args) {
+        Scanner inpıt =new Scanner(System.in);
+            System.out.print("Sayı giriniz: ");
+        int sayi = inpıt.nextInt();
+            int sayiIslem,topla=0;
+            System.out.println("sayınız: "+sayi);
+        while(sayi!=0){
+            sayiIslem=sayi%10;
+                sayi/=10;
+                topla+=sayiIslem;
+            System.out.println("Basamaktaki sayılar: "+sayiIslem);
+        }
+            System.out.println("Sayıların toplamı : "+topla);
+        }
+        }
+
+
+
+
+
+
+
+
+                                                     1000 sayısına kadar olan armstrong sayıları gösteren algoritma
+
+
+
+public class Main {
+        public static void main(String[] args) {
+
+            int k;
+            for (k = 1; k <= 999; k++) {
+
+
+
+
+
+                    int sayi=k;
+            int  geciciSayi1, geciciSayi2;
+            int basamakSayisi = 0, basamakSayiSlemi;
+            int basamakDegeri;
+            geciciSayi1 = sayi;
+            geciciSayi2 = sayi;
+            int top = 0;
+            while (geciciSayi1 != 0) {
+                basamakSayiSlemi = geciciSayi1 / 10;
+                geciciSayi1 = basamakSayiSlemi;
+                basamakSayisi++;
+            }
+           // System.out.println("basamak sayısı: " + basamakSayisi);
+            while (geciciSayi2 != 0) {
+                basamakDegeri = geciciSayi2 % 10;
+                geciciSayi2 /= 10;
+                int pow = 1;
+                for (int i = 1; i <= basamakSayisi; i++) {
+                    pow *= basamakDegeri;
+                }
+                top += pow;
+                //     System.out.println("Basamaktaki sayıları: "+basamakDegeri);
+                //     System.out.println("pow: "+pow);
+            }
+            if (sayi == top) {
+                System.out.println("Sayı armstrong bir sayıdır ! " + sayi);
+            } else {
+               // System.out.println("*");
+               // System.out.println("Sayı armstrong bir sayı değildir ! " + sayi);
+            }
+            }
+
+        }
+        }
