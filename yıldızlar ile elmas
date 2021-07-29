@@ -2,64 +2,38 @@ import java.util.Scanner;
 public class Main {
         public static void main(String[] args) {
 
+
                 int sayi=5;
-                for(int x=1;x<sayi;x++){
-                        for (int y=x; y<=sayi-1;y++)
-                        {
-                                System.out.print(" ");
-                        }
-                        for(int z=1;z<(2*x);z++){
-                                System.out.print("*");
-                        }
-                        System.out.println(" ");
-                }
-                for(int i=sayi-1; i>=1;i--){
-                        for (int j=sayi;j>i;j--){
-                                System.out.print(" ");
-                        }
-                        for (int k=1;k<2*i;k++){
-                                System.out.print("*");
-                        }
-                        System.out.println(" ");
-                }
-
-        }
-        }
-
-
-
--------------------------------------------------
-
-
-
-import java.util.Scanner;
-public class Main {
-        public static void main(String[] args) {
-
-                int giris=6;
                 int yildiz=1;
-                int bosluk=giris-1;
-
-
-                for (int x=0;x<giris;x++) {
-                for (int y=0;y<bosluk;y++){ System.out.print(" "); }
-                for (int z=0;z<yildiz;z++){ System.out.print("*"); }
-                System.out.println(" ");
-                bosluk--;
-                yildiz+=2;
+                int bosluk=sayi-1;
+                for (int i=0;i<sayi;i++){
+                        for (int k=0;k<bosluk;k++){
+                                System.out.print(" ");
+                        }
+                        for (int l=0;l<yildiz;l++){
+                                System.out.print("*");
+                        }
+                        System.out.println(" ");
+                        yildiz+=2;
+                        bosluk--;
                 }
+
                 yildiz-=4;
                 bosluk=1;
-                         for (int x=0;x<giris;x++) {
-                        for (int y=0;y<bosluk;y++){
+                     for (int i=0;i<sayi;i++){
+                        for (int k=0;k<bosluk;k++){
                                 System.out.print(" ");
-                        }for (int z=0;z<yildiz;z++){
+                        }
+                        for (int l=0;l<yildiz;l++){
                                 System.out.print("*");
                         }
                         System.out.println(" ");
-                        bosluk++;
                         yildiz-=2;
+                        bosluk++;
                 }
+
+
+
 
         }
         }
