@@ -1,0 +1,70 @@
+import java.util.Scanner;
+public class Main {
+        public static void main(String[] args) {
+                String pass,usName;
+                int price=1000,bounce=3,girisDurumu=0,select;
+                Scanner giris=new Scanner(System.in);
+                     while(bounce!=0) {
+                             System.out.print("Kullanıcı adı : ");
+                             usName=giris.nextLine();
+
+                             System.out.print("Şifre: ");
+                             pass=giris.nextLine();
+                             if (usName.equals("patika") && pass.equals("123")) {
+                                     System.out.println("Bankamıza Hoşgeldiniz !");
+                                     girisDurumu=1;
+
+                                     do{
+                                             System.out.println();
+                                             System.out.println(" Lütfen işlem seçiniz : ");
+                                             System.out.println(" 1=> Bakiye sorgula  ");
+                                             System.out.println(" 2=> Para yatırma  ");
+                                             System.out.println(" 3=> Para çekme  ");
+                                             System.out.println(" 4=> Çıkış yap  ");
+                                             select=giris.nextInt();
+                                             switch (select){
+                                                     case 1:
+                                                             System.out.println("Toplam bakiyeniz: "+price);
+                                                             break;
+                                                     case 2:
+                                                             System.out.print("Yatırmak istediğiniz tuarı giriniz: ");
+                                                             int paraEkle=giris.nextInt();
+                                                             price+=paraEkle;
+                                                             break;
+
+                                                     case 3:
+                                                             System.out.print("Çekmek istediğiniz tuarı giriniz: ");
+                                                             int paraCek=giris.nextInt();
+                                                             price-=paraCek;
+                                                             break;
+                                                     case 4:
+                                                             System.out.println("Çıkış başarılı , İyi günler dileriz !");
+                                                             girisDurumu=0;
+                                                             break;
+                                                     default:
+                                                             System.out.println("Bir hata oldu !");
+                                                             break;
+
+
+                                             }
+                                     }while (girisDurumu==1);
+
+
+                                     bounce=0;
+
+                             } else {
+                                     System.out.print("Giriş başarısız !");
+                                     bounce--;
+                                     System.out.println("Kalan deneme: " + bounce);
+                                     girisDurumu=0;
+                             }
+
+
+
+
+
+
+                     }
+
+        }
+        }
