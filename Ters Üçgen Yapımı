@@ -1,0 +1,19 @@
+class Main {
+  public static void main(String[] args) {
+      int basamak=10;
+      int yildiz=(basamak*2)-1;
+    for(int i=1;i<=basamak;i++){
+     for(int k=1;k<=i;k++){
+       System.out.print(" ");
+     }
+     for(int l=yildiz ;l>0;l--)
+      {
+         System.out.print("*");
+      }
+      yildiz-=2;
+
+     System.out.println(" ");
+    }
+
+  }
+}
