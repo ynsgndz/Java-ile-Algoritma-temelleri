@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class main {
+    static int taban,tavan;
+    static int usAl(int taban,int tavan){
+        Scanner inp=new Scanner(System.in);
+
+
+        System.out.print("Üs giriniz: ");
+        tavan=inp.nextInt();
+        System.out.print("alt giriniz: ");
+        taban=inp.nextInt();
+
+
+         int result=1;
+            for (int i=1;i<=tavan;i++)
+            {
+                result*=taban;
+            }
+        System.out.println("Sonuc:" +result);
+                 return  usAl(taban,tavan);
+
+    }
+    public static void main(String[] args) {
+
+        usAl(taban,tavan);
+
+
+
+    }
+}
