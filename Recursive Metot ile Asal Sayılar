@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class main {
+
+    static  int a;
+
+    static int asallik(int a){
+
+        Scanner scan=new Scanner(System.in);
+        System.out.print("Sayı giriniz: ");
+
+        a=scan.nextInt();
+
+        for (int i=3;i<a;i++){
+            if (a%i==0){
+                System.out.println(a+" sayısı asal değildir !");
+                break;
+            }else{
+                System.out.println(a+" sayısı asal !");
+                break;
+            }
+        }
+
+        return asallik(a);
+    }
+    public static void main(String[] args) {
+
+
+            asallik(a);
+
+
+    }
+}
