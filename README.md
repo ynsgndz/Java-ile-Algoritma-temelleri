@@ -1,2 +1,2 @@
 # java101
-java Derslerinin ödevleri
+java  Algoritma Derslerinin ödevleri
